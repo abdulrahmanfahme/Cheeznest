@@ -1,0 +1,179 @@
+/* Hide horizontal overflow for the entire page CSS */
+/* floating => Class */
+html, body {
+    overflow-x: hidden;
+}
+
+.floating img {
+    animation: floating-animate-model 4s linear infinite;
+}
+
+@keyframes floating-animate-model {
+    0% {
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+
+    50% {
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+
+    100% {
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+}
+
+/* Main Product Card Hover Effect CSS */
+/* main-sec => Class*/
+form.cart.e-loop-add-to-cart-form {
+    position: relative;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; 
+    padding: 0px 0px;
+    border: 1px solid #1B0B0D; 
+    border-radius: 48px; 
+    background-color: #fff;
+    color: #1B0B0D; 
+}
+form.cart.e-loop-add-to-cart-form::after {
+    content: url('https://kitpapa.net/cheeznest/wp-content/uploads/2024/10/shopping-cart.svg')!important;
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    padding-top: 03px;
+    opacity: 0;
+    width: 0;
+    overflow: hidden; 
+    transition: all 0.3s ease;
+}
+/* Increase padding and show the icon when hovering over .main-sec */
+.main-sec:hover form.cart.e-loop-add-to-cart-form {
+    padding-right: 30px; 
+    border-width: 1px; 
+    border-color: transparent;
+}
+.main-sec:hover form.cart.e-loop-add-to-cart-form::after {
+    opacity: 1;
+    width: 30px; 
+}
+.main-sec a.added_to_cart.wc-forward {
+    display: none !important;
+}
+.main-sec:hover .price {
+    color: white !important;
+}
+.main-sec:hover h1.product_title.entry-title.elementor-heading-title {
+    color: white !important;
+}
+
+/* Product Carousel Arrow Style Css */
+.elementor-widget-loop-carousel .elementor-swiper-button.elementor-swiper-button-next:hover svg, .elementor-widget-loop-carousel .elementor-swiper-button.elementor-swiper-button-prev:hover svg {
+    fill: none;
+}
+.elementor-widget-loop-carousel .elementor-swiper-button.elementor-swiper-button-next svg, .elementor-widget-loop-carousel .elementor-swiper-button.elementor-swiper-button-prev svg {
+    fill: #1b0b0d00;
+}
+
+/* Review Slider Arrow Icon Css */
+.elementor-widget-n-carousel .elementor-swiper-button.elementor-swiper-button-next svg, 
+.elementor-widget-n-carousel .elementor-swiper-button.elementor-swiper-button-prev svg {
+    fill: none; /* Default fill */
+    stroke: currentColor; /* Apply the current text color */
+}
+.elementor-widget-n-carousel .elementor-swiper-button.elementor-swiper-button-next:hover svg, 
+.elementor-widget-n-carousel .elementor-swiper-button.elementor-swiper-button-prev:hover svg {
+    stroke: #FFFFFF; /* Change stroke color on hover */
+    fill: none !important; /* Ensure no fill is applied on hover */
+}
+
+/* Blog Card Author Text And Icon Css */
+/* custom-heading => Class*/
+/* blog-tittle => Class*/
+.custom-heading .elementor-heading-title:before {
+    content: "Written by";
+    color: #1B0B0D;
+    font-size: 14px;
+    font-family: DM-sans;
+    font-weight: normal;
+    display: block;
+}
+.elementor-button-icon svg:hover {
+    fill: none !important;
+}
+.blog-tittle .elementor-heading-title {
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 2 !important; /* Number of lines to show */
+    -webkit-box-orient: vertical !important;
+}
+
+/* Cart Text (Header Option) */
+.ca-icon-text::before {
+    content: 'Cart ';
+    font-size: 14px;
+    font-weight: 400;
+    color: #1B0B0D; 
+    margin-left: 16px;
+    font-family: 'DM Sans', sans-serif;
+}
+.ca-icon-text {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DM Sans', sans-serif;
+}  
+
+/* Button Icon Style  */
+selector span.elementor-button-icon{
+    height: 16px;
+}
+selector span.elementor-button-icon svg{
+    width:16px;
+}
+
+/* Search Popup */
+selector .e-search-input, selector .e-search-submit  {
+    height: 56px !important;
+}
+selector .e-search-submit  {
+    position: absolute;
+    right: 0;
+} 
+
+/* Filter Style */
+.filter li{
+    width: 100%;
+}
+.filter label{
+    color: var(--e-global-color-primary);
+    text-transform: capitalize;
+    font-family: 'Poppins';
+    
+}
+.filter .wpf_item_name{
+    font-size: 20px;
+    font-family: 'Poppins';
+    font-weight: 500;
+}
+.filter .wpf_search_button{
+    background-color: var(--e-global-color-accent)!important;
+    font-family: 'Poppins';
+}
+.filter .wpf_search_button:hover{
+    background-color: var(--e-global-color-primary);
+}
+.filter .ui-widget-header{
+    background-color: var(--e-global-color-accent)!important;
+}
+.filter button{
+    padding: 10px 32px 10px 32px;
+    color: #fff;
+}
+.filter .wpf_autocomplete input{
+    background-color: transparent;
+}   
